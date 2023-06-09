@@ -1,0 +1,142 @@
+<DoCTYPE html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			MTN Irancell IOS Landing Page
+
+		</title>
+		<style>
+			body{
+				font-family: Arial;
+				background-image:url("phase2.jpg");
+				background-size: 1600px 750px;
+				background-repeat: no-repeat;
+			}
+			.box-time{
+				margin: 150px auto 0 auto;
+				display: block;
+				width: 100%;
+				text-align: center;
+				animation-name: fade;
+				animation-delay: 1ms;
+				animation-duration: 1s;
+				animation-iteration-count: 1; 
+			}	
+			.timeBox{
+				display: inline-block;
+				width: 150px;
+				height:150px;
+				background-color:#3c023d;
+				padding:0px 15px 0px 15px;
+				border-radius: 15px;
+				border: 3px solid #fff;
+				direction: rtl;
+				padding-top: 30px;
+				font-size: 36px;
+				text-shadow:2px 1px #f00;
+				color: #fff;
+			}
+			h1{
+				color: #ffffff; 
+				font-size:36px !important;
+			 	padding: 10px 10px;
+			}
+			.maintitr{
+				border:5px solid #ffffff; 
+			    border-radius: 15px; 
+			    width: 65%; 
+				text-align: center;
+				background-color: #3c023d; 
+				margin:0 auto;
+				animation-name: show;
+				animation-delay: 1ms;
+				animation-duration: 1s;
+				animation-iteration-count: 1; 
+				display: none;
+				opacity: 0.7;
+			}
+			@keyfram fade{
+				from{
+					opacity: 1;
+				}
+				to{
+					opacity: 0
+				}
+			}
+			@keyfram show{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1
+				}
+			}
+		</style>
+	</head>
+	<body>
+		 <br>
+		 <br>
+		 <div class="box-time">
+	        <p class="timeBox" id="demo1"></p>
+	        <p class="timeBox" id="demo2"></p>
+	        <p class="timeBox" id="demo3"></p>
+	        <p class="timeBox" id="demo4"></p>
+      	 </div>
+			
+			
+      
+      <script>
+		    // Set the date we're counting down to
+		    // var countDownDate = new Date("August 23, 2022 10:00:00").getTime();
+		    var countDownDate = new Date("June 25, 2022 18:00:00").getTime();
+
+		    // Update the count down every 1 second
+		    var x = setInterval(function() {
+
+		    // Get today's date and time
+		    var now = new Date().getTime();
+		    
+		    // Find the distance between now and the count down date
+		    var distance = countDownDate - now;
+		    
+		    // Time calculations for days, hours, minutes and seconds
+		    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		 
+		    // Output the result in an element with id="demo"
+		    document.getElementById("demo1").innerHTML =  days + "<br><br>" +" days"
+		    document.getElementById("demo2").innerHTML =  hours + "<br><br>" +"hours";
+		    document.getElementById("demo3").innerHTML =  minutes + "<br><br>" +"minutes";
+		    document.getElementById("demo4").innerHTML =  seconds + "<br><br>" +"seconds";
+		    		}, 1000);
+			</script>
+
+			
+		<!--     // If the count down is over, write some text 
+			
+			 // if (distance < 0) {
+	   //      clearInterval(x);
+	   //      var countdown = document.querySelector('.box-time');
+	   //      var msg = document.querySelector(".maintitr");
+	   //      countdown.remove();
+	   //      msg.style.display = "block";
+	   //      document.getElementById("demo").innerHTML = "TIME'S UP";
+	        // document.getElementById("demo1").style.display = 'none';
+	        // document.getElementById("demo2").style.display = 'none';
+	        // document.getElementById("demo3").style.display = 'none' ; 
+	        // document.getElementById("demo4").style.display = 'none'; 
+	        // document.getElementsByClassName("box-time").style.display = 'none';
+	    	// } -->
+		
+
+			<!-- <p id="demo" style="color: red; text-shadow: 2px 2px #3c023d; font-size: 38px; text-align: center;"></p> -->
+		
+		<!-- <div class="maintitr">
+			 	<h1>Please join our skype meeting </h1>
+			 	<h1>on Monday 13 July, 4 pm </h1>
+			 	<h1>to review the Beta release of new IOS</h1>
+		</div> -->
+	</body>
+</html>
